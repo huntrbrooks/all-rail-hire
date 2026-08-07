@@ -1,69 +1,132 @@
 import Image from "next/image";
+import { HeroSlider } from "@/components/HeroSlider";
+import { Section } from "@/components/Section";
 
-export default function Home() {
+const services = [
+  "Heavy rail welding",
+  "Re-railing",
+  "Level crossing renewal",
+  "Transom and bridge renewal",
+  "Reconditioning",
+  "Crane rail welding",
+  "Light rail welding",
+  "Track certification",
+  "Track inspection",
+  "Track construction",
+  "Rail adjusting (PW3)",
+  "Turnout and crossover Construction",
+  "Supervision",
+];
+
+const gallery = [
+  "/images/gallery/img-1.jpg",
+  "/images/gallery/img-2.jpg",
+  "/images/gallery/img-3.jpg",
+  "/images/gallery/img-4.jpg",
+  "/images/gallery/img-5.jpg",
+  "/images/gallery/img-6.jpg",
+];
+
+const stats = [
+  { value: "10+", label: "Years of experience" },
+  { value: ">500", label: "Successful projects" },
+  { value: "10", label: "Trained professionals" },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <HeroSlider />
+
+      <Section className="bg-white">
+        <h1 className="max-w-4xl font-heading text-3xl font-bold uppercase leading-tight tracking-wide text-brand-dark md:text-4xl lg:text-5xl">
+          Transport Sector, the Rail Industry Specialists —{" "}
+          <span className="text-brand-accent">Trust in the Best</span>
+        </h1>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-brand-muted md:text-xl">
+          We are a specialist railway industry company committed to delivering
+          quality works efficiently and cost effectively, with safety as our
+          top priority.
+        </p>
+      </Section>
+
+      <Section className="bg-brand-light">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="font-heading text-2xl font-semibold text-brand-dark md:text-3xl">
+              Setting the standard for the rail industry
+            </h2>
+            <p className="mt-4 leading-relaxed text-brand-muted">
+              All Rail Hire have a strict and thorough recruitment process to
+              ensure we employ the best personnel to deliver works in line with
+              our high standards of quality that our clients should expect.
+            </p>
+            <p className="mt-4 leading-relaxed text-brand-muted">
+              Although All Rail Hire is a new concept within the industry, it
+              brings over a decade of knowledge and rail transport experience.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-heading text-2xl font-semibold text-brand-dark md:text-3xl">
+              Professional and high grade services
+            </h2>
+            <p className="mt-4 text-brand-muted">
+              Services that we provide include, but are not limited to:
+            </p>
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+              {services.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-sm text-brand-dark md:text-base"
+                >
+                  <span
+                    className="mt-2 inline-block h-1.5 w-1.5 shrink-0 bg-brand-accent"
+                    aria-hidden
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <Section className="bg-white !py-8">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {gallery.map((src) => (
+            <div
+              key={src}
+              className="relative aspect-[4/3] overflow-hidden bg-brand-dark/10"
+            >
+              <Image
+                src={src}
+                alt=""
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </Section>
+
+      <Section className="bg-brand-dark text-white">
+        <h2 className="text-center font-heading text-2xl font-semibold uppercase tracking-wide md:text-3xl">
+          Why All Rail Hire
+        </h2>
+        <div className="mt-10 grid gap-8 sm:grid-cols-3">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="font-heading text-5xl font-bold text-brand-accent md:text-6xl">
+                {stat.value}
+              </p>
+              <p className="mt-3 text-sm uppercase tracking-wider text-white/80 md:text-base">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
   );
 }
