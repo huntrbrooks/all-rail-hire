@@ -25,7 +25,10 @@ export const metadata: Metadata = {
   description:
     "All Rail Hire offers efficient quality rail services in Australia prioritizing safety. Specializing in rail welding, re-railing, and more. Contact for professional services.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/images/favicon.png", type: "image/png", sizes: "200x200" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
   },
   openGraph: {
     title: "Rail Industry Specialists | All Rail Hire | Australia",
