@@ -5,7 +5,7 @@ Marketing website clone of All Rail Hire — Next.js + Tailwind, ready for Verce
 ## Contact
 
 - Phone: 0456 960 797
-- Email: david@allrailhire.com
+- Email: dave@allrailhire.com
 - Address: 3/36 Latitude Boulevard, Thomastown Vic 3074
 
 ## Develop

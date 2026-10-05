@@ -1,7 +1,7 @@
 export const contact = {
   phoneDisplay: "0456 960 797",
   phoneTel: "0456960797",
-  email: "david@allrailhire.com",
+  email: "dave@allrailhire.com",
   address: "3/36 Latitude Boulevard, Thomastown Vic 3074",
   company: "ALL RAIL HIRE PTY LTD",
   hours: "24/7",
